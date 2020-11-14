@@ -7,7 +7,7 @@ keymap=`echo KEYMAP=br-abnt2 >> /etc/vconsole.conf`
 
 echo -e "\nInforme um nome ao hostname:"
 read name_host
-hostname=`echo $name_host`
+hostname=`echo $name_host >> /etc/hostname`
 hosts1=`echo 127.0.0.1 localhost.localdomain localhost >> /etc/hosts`
 hosts2=`echo ::1 localhost.localdomain localhost >> /etc/hosts`
 host3=`echo 112.0.0.1 $name_host.localdomain $name_host >> /etc/hosts`

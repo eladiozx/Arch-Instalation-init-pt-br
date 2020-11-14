@@ -24,6 +24,10 @@ echo "Informe a Partição de Instalação da Grub"
 echo -e "\n\nInisira uma nova senha ao Root:\n"
  password=`passwd`
 
+echo -e "Instalação de ferramentas de rede"
+ rede=`pacman -S dhcpcd`
+ startRede=`systemctl enable dhcpcd`
+
 echo -e "\nDeseja criar um novo usuario?(ESCREVA true ou false)\n"
 read condition
 
